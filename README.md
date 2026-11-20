@@ -1,5 +1,7 @@
 # TeknoMojo SmartHome
 
+> **Experimental software.** These libraries are intended for evaluation and prototyping. Production use is unsupported, and APIs and behavior may change as validation continues.
+
 A collection of .NET 11 libraries and command-line tools for working with connected-home devices.
 
 ## HomeKit
