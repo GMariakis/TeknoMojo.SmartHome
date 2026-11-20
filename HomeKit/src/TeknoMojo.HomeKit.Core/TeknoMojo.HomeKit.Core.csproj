@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net11.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>TeknoMojo.HomeKit.Core</RootNamespace>
+    <InvariantGlobalization>true</InvariantGlobalization>
+
+    <!-- NuGet package identity -->
+    <PackageId>TeknoMojo.HomeKit.Core</PackageId>
+    <Description>A .NET 11 library for the Apple HomeKit Accessory Protocol (HAP), including DNS-SD discovery of HAP accessories on the local network.</Description>
+    <PackageTags>homekit;hap;homekit-accessory-protocol;apple;smart-home;iot;dns-sd;discovery</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- DNS-SD discovery of HAP accessories on the LAN. -->
+    <PackageReference Include="TeknoMojo.mDNS.Core" Version="2.0.0" />
+  </ItemGroup>
+
+</Project>

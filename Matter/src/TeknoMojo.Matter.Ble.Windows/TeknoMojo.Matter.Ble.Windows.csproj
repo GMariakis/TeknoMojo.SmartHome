@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net11.0-windows10.0.19041.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <!-- Not "...Ble.Windows": that literally collides with the global WinRT "Windows" namespace
+         (e.g. "Windows.Devices.Bluetooth" resolves against our own namespace first), which made
+         every unqualified WinRT reference in this project ambiguous. -->
+    <RootNamespace>TeknoMojo.Matter.Ble.WinRT</RootNamespace>
+    <InvariantGlobalization>true</InvariantGlobalization>
+
+    <!-- NuGet package identity -->
+    <PackageId>TeknoMojo.Matter.Ble.Windows</PackageId>
+    <Description>Windows BLE (Bluetooth Low Energy) commissioning transport for TeknoMojo.Matter: scans for commissionable Matter devices, performs the BTP (Bluetooth Transport Protocol) handshake, and exposes an IMatterTransport over Windows.Devices.Bluetooth GATT. Windows-only.</Description>
+    <PackageTags>matter;csa;bluetooth;ble;btp;commissioning;windows;gatt</PackageTags>
+
+    <!-- Internal WinRT plumbing (event handlers, disposal) doesn't need doc comments the way the
+         portable Matter.Core surface does. -->
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TeknoMojo.Matter.Core\TeknoMojo.Matter.Core.csproj" />
+  </ItemGroup>
+
+</Project>

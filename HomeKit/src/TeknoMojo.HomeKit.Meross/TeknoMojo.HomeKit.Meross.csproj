@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net11.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>TeknoMojo.HomeKit.Meross</RootNamespace>
+    <InvariantGlobalization>true</InvariantGlobalization>
+
+    <!-- NuGet package identity -->
+    <PackageId>TeknoMojo.HomeKit.Meross</PackageId>
+    <Description>Meross smart-device integration for TeknoMojo.HomeKit: cloud and local discovery and control of Meross outlets. Built on TeknoMojo.HomeKit.Core.</Description>
+    <PackageTags>homekit;meross;smart-home;iot;outlet;smart-plug;discovery</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TeknoMojo.HomeKit.Core\TeknoMojo.HomeKit.Core.csproj" />
+  </ItemGroup>
+
+</Project>

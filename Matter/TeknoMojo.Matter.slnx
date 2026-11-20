@@ -1,0 +1,17 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/TeknoMojo.Matter.Ble.Linux/TeknoMojo.Matter.Ble.Linux.csproj" />
+    <Project Path="src/TeknoMojo.Matter.Ble.MacOS/TeknoMojo.Matter.Ble.MacOS.csproj" />
+    <Project Path="src/TeknoMojo.Matter.Ble.Windows/TeknoMojo.Matter.Ble.Windows.csproj" />
+    <Project Path="src/TeknoMojo.Matter.Cli/TeknoMojo.Matter.Cli.csproj" />
+    <Project Path="src/TeknoMojo.Matter.Core/TeknoMojo.Matter.Core.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/TeknoMojo.Matter.Ble.Linux.Tests/TeknoMojo.Matter.Ble.Linux.Tests.csproj" />
+    <Project Path="tests/TeknoMojo.Matter.Core.Tests/TeknoMojo.Matter.Core.Tests.csproj" />
+  </Folder>
+  <Properties Name="Configuration">
+    <Property Name="Debug|Any CPU" />
+    <Property Name="Release|Any CPU" />
+  </Properties>
+</Solution>

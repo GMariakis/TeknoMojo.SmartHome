@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net11.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>TeknoMojo.HomeKit.Hap</RootNamespace>
+    <InvariantGlobalization>true</InvariantGlobalization>
+
+    <!-- NuGet package identity -->
+    <PackageId>TeknoMojo.HomeKit.Hap</PackageId>
+    <Description>A .NET 11 HomeKit Accessory Protocol (HAP) controller: pair-setup (SRP-6a), pair-verify (X25519 + Ed25519), encrypted ChaCha20-Poly1305 session, and characteristic read/write. Pairs directly with HAP-native accessories (VOCOlinc, Meross HAP outlets, Philips Hue bridge, etc.) without going through Apple Home.</Description>
+    <PackageTags>homekit;hap;homekit-accessory-protocol;apple;smart-home;iot;pairing;srp;ed25519;chacha20</PackageTags>
+
+    <!-- HAP crypto (SRP-6a, Ed25519, X25519) not in the BCL; ChaCha20-Poly1305 + HKDF come from the BCL. -->
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TeknoMojo.HomeKit.Core\TeknoMojo.HomeKit.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BouncyCastle.Cryptography" Version="2.7.0" />
+  </ItemGroup>
+
+</Project>

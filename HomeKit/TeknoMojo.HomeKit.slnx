@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/TeknoMojo.HomeKit.Cli/TeknoMojo.HomeKit.Cli.csproj" />
+    <Project Path="src/TeknoMojo.HomeKit.Core/TeknoMojo.HomeKit.Core.csproj" />
+    <Project Path="src/TeknoMojo.HomeKit.Hap/TeknoMojo.HomeKit.Hap.csproj" />
+    <Project Path="src/TeknoMojo.HomeKit.Meross/TeknoMojo.HomeKit.Meross.csproj" />
+  </Folder>
+  <Properties Name="Configuration">
+    <Property Name="Debug|Any CPU" />
+    <Property Name="Release|Any CPU" />
+  </Properties>
+</Solution>

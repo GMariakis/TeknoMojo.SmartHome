@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net11.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>TeknoMojo.HomeKit.Cli</RootNamespace>
+    <AssemblyName>hkscan</AssemblyName>
+    <InvariantGlobalization>true</InvariantGlobalization>
+
+    <!-- This is a POC tool, not a shipped library: don't package it or emit doc XML. -->
+    <IsPackable>false</IsPackable>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TeknoMojo.HomeKit.Core\TeknoMojo.HomeKit.Core.csproj" />
+    <ProjectReference Include="..\TeknoMojo.HomeKit.Hap\TeknoMojo.HomeKit.Hap.csproj" />
+    <ProjectReference Include="..\TeknoMojo.HomeKit.Meross\TeknoMojo.HomeKit.Meross.csproj" />
+    <!-- Consumed as a real NuGet package from the local feed, not a project reference, to prove
+         TeknoMojo.Matter.Core packages and resolves correctly for an external consumer. -->
+    <PackageReference Include="TeknoMojo.Matter.Core" Version="0.2.0" />
+  </ItemGroup>
+
+</Project>

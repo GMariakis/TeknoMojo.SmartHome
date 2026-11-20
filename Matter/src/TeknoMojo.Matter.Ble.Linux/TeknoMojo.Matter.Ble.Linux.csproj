@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net11.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>TeknoMojo.Matter.Ble.Linux</RootNamespace>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+
+    <!-- NuGet package identity -->
+    <PackageId>TeknoMojo.Matter.Ble.Linux</PackageId>
+    <Description>Linux BLE (Bluetooth Low Energy) commissioning transport for TeknoMojo.Matter: talks to BlueZ over a hand-rolled D-Bus client (no third-party D-Bus dependency), scans for commissionable Matter devices, performs the BTP handshake, and exposes an IMatterTransport. Linux-only at runtime (targets net11.0, not a Linux-specific TFM, since D-Bus is a plain Unix-socket protocol).</Description>
+    <PackageTags>matter;csa;bluetooth;ble;btp;commissioning;linux;bluez;dbus;gatt</PackageTags>
+
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TeknoMojo.Matter.Core\TeknoMojo.Matter.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- The hand-rolled D-Bus wire layer (DBusValue/DBusMarshal/DBusWriter/DBusReader) is
+         internal; expose it to the test project so the marshaling logic — the part most at
+         risk of a silent alignment bug — gets real byte-level verification. -->
+    <InternalsVisibleTo Include="TeknoMojo.Matter.Ble.Linux.Tests" />
+  </ItemGroup>
+
+</Project>

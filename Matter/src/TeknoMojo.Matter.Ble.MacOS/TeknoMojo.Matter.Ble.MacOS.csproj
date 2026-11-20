@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net11.0-macos</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>TeknoMojo.Matter.Ble.MacOS</RootNamespace>
+    <InvariantGlobalization>true</InvariantGlobalization>
+
+    <!-- NuGet package identity -->
+    <PackageId>TeknoMojo.Matter.Ble.MacOS</PackageId>
+    <Description>macOS BLE (Bluetooth Low Energy) commissioning transport for TeknoMojo.Matter: scans for commissionable Matter devices via CoreBluetooth (Microsoft's official .NET/macOS bindings), performs the BTP handshake, and exposes an IMatterTransport. macOS-only.</Description>
+    <PackageTags>matter;csa;bluetooth;ble;btp;commissioning;macos;corebluetooth;gatt</PackageTags>
+
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TeknoMojo.Matter.Core\TeknoMojo.Matter.Core.csproj" />
+  </ItemGroup>
+
+</Project>

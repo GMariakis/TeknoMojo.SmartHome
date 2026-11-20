@@ -1,0 +1,28 @@
+<Project>
+
+  <!-- Shared package metadata and build settings for all TeknoMojo.HomeKit projects. -->
+  <PropertyGroup>
+    <Authors>TeknoMojo</Authors>
+    <Company>TeknoMojo</Company>
+    <Product>TeknoMojo HomeKit</Product>
+    <Version>2.0.1</Version>
+    <Copyright>Copyright (c) 2026 TeknoMojo</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/GMariakis/TeknoMojo.SmartHome</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/GMariakis/TeknoMojo.SmartHome</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+
+    <!-- Build & pack settings -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>

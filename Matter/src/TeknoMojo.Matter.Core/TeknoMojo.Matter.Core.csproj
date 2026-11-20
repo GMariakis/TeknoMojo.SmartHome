@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net11.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>TeknoMojo.Matter.Core</RootNamespace>
+    <InvariantGlobalization>true</InvariantGlobalization>
+
+    <!-- NuGet package identity -->
+    <PackageId>TeknoMojo.Matter.Core</PackageId>
+    <Description>A .NET 11 client for the CSA Matter protocol: mDNS discovery, commissioning, PASE and CASE sessions, and Interaction Model reads, invokes, and subscriptions.</Description>
+    <PackageTags>matter;csa;smart-home;iot;spake2;case;pase;interaction-model;on-off;mdns</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="TeknoMojo.mDNS.Core" Version="2.0.0" />
+    <!-- P-256 point arithmetic for SPAKE2+ / CASE and X.509 for operational certs. -->
+    <PackageReference Include="BouncyCastle.Cryptography" Version="2.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Attestation verification is internal, but rejecting a tampered chain is exactly the
+         behaviour worth testing directly rather than only through the commissioning flow. -->
+    <InternalsVisibleTo Include="TeknoMojo.Matter.Core.Tests" />
+  </ItemGroup>
+
+</Project>
